@@ -113,7 +113,7 @@ do_action('wp_body_open');
 <header id="wrapper-navbar" class="fixed-top p-0">
     <nav class="navbar navbar-expand-lg p-0">
         <div class="container-xl py-2 nav-top align-items-end">
-            <div class="text-lg-center logo-container"><a href="/" class="logo" aria-label="AOS-Stade Homepage"></a></div>
+            <div class="text-lg-center logo-container"><a href="<?=pll_home_url()?>" class="logo" aria-label="AOS-Stade Homepage"></a></div>
             <div class="button-container d-lg-none">
                 <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
