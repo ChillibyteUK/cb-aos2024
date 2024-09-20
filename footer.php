@@ -29,23 +29,27 @@ defined('ABSPATH') || exit;
             <div
                 class="col-sm-6 col-lg-3 col-xl-3 order-xl-4 d-flex flex-column gap-4 justify-content-between pe-0 footer__address">
                 <div>
-                    <div class="footer__heading">Head Office</div>
-                    <?=get_field('head_office_address', 'options')?>
+                    <div class="footer__heading"><?=pll__('Mailing Address','cb-aos2024')?></div>
+                    <?=get_field('mailing_address', 'options')?>
+                </div>
+                <div>
+                    <div class="footer__heading"><?=pll__('Shipping Address','cb-aos2024')?></div>
+                    <?=get_field('shipping_address', 'options')?>
                 </div>
                 <ul class="fa-ul">
                     <li>
                         <span class="fa-li"><i class="fa-solid fa-phone"></i></span>
                         <a
-                            href="tel:<?=parse_phone(get_field('head_office_phone', 'options'))?>"><?=get_field('head_office_phone', 'options')?></a>
+                            href="tel:<?=parse_phone(get_field('contact_phone', 'options'))?>"><?=get_field('contact_phone', 'options')?></a>
                     </li>
                     <li>
                         <span class="fa-li"><i class="fa-solid fa-fax"></i></span>
-                        <?=get_field('head_office_fax', 'options')?>
+                        <?=get_field('contact_fax', 'options')?>
                     </li>
                     <li>
                         <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
                         <a
-                            href="mailto:<?=get_field('head_office_email', 'options')?>"><?=get_field('head_office_email', 'options')?></a>
+                            href="mailto:<?=get_field('contact_email', 'options')?>"><?=get_field('contact_email', 'options')?></a>
                     </li>
                 </ul>
             </div>

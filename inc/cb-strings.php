@@ -8,6 +8,8 @@ function cb_register_strings() {
         pll_register_string( 'operations_products', 'Operations & Products', 'cb-aos2024' );
         pll_register_string( 'quick_links', 'Quick Links', 'cb-aos2024' );
         pll_register_string( 'sustainability', 'Sustainability', 'cb-aos2024' );
+        pll_register_string( 'mailing_address', 'Mailing Address', 'cb-aos2024' );
+        pll_register_string( 'shipping_address', 'Shipping Address', 'cb-aos2024' );
     }
 }
 
