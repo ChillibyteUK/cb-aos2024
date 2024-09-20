@@ -1,0 +1,91 @@
+$col-primary: #5D7F9C;
+$col-dark: #666666;
+$col-darkest: #4A4A4A;
+$col-light: #F2F2F2;
+
+:root {
+    
+    // --hsl-blue-200: #ebeced;
+    --hsl-blue-200: 208 5% 92%;
+    // --hsl-blue-300: #c6d7e7;
+    --hsl-blue-300: 208 40% 84%;
+    // --hsl-blue-400: #749ec3;
+    --hsl-blue-400: 208 40% 61%;
+    // --hsl-blue-600: #406b91;
+    --hsl-blue-600: 208 40% 41%;
+    // --hsl-blue-900: #21374a;
+    --hsl-blue-900: 208 40% 21%;
+    
+    // --hsl-green-200: #e2f3e7;
+    --hsl-green-200: 135 40% 92%;
+    // --hsl-green-300: #va6d9b3;
+    --hsl-green-300: 135 40% 75%;
+    // --hsl-green-400: #74c388;
+    --hsl-green-400: 135 40% 61%;
+    // --hsl-green-600: #409154;
+    --hsl-green-600: 135 40% 41%;
+    // --hsl-green-900: #214a2b;
+    --hsl-green-900: 135 40% 21%;
+
+    // --hsl-red-200: #e2bbbd;
+    --hsl-red-200: 357 40% 81%;
+    // --hsl-red-300: #d3979a;
+    --hsl-red-300: 357 40% 71%;
+    // --hsl-red-400: #c37478;
+    --hsl-red-400: 357 40% 61%;
+    // --hsl-red-600: #914044;
+    --hsl-red-600: 357 40% 41%;
+    // --hsl-red-900: #4a2123; 
+    --hsl-red-900: 357 40% 21%;
+
+    // --hsl-dark: #808080;
+    --hsl-dark: 0 0% 50%;
+    // --hsl-darkest: #4a4a4a;
+    --hsl-darkest: 0 0% 29%;
+    // --hsl-light: #f2f2f2;
+    --hsl-light: 0 0% 95%;
+
+    --h-top: 85px;
+    --h-top-desktop: 85px;
+
+    --col-blue-200: hsl(var(--hsl-blue-200) / 1);
+    --col-blue-300: hsl(var(--hsl-blue-300) / 1);
+    --col-blue-400: hsl(var(--hsl-blue-400) / 1);
+    --col-blue-600: hsl(var(--hsl-blue-600) / 1);
+    --col-blue-900: hsl(var(--hsl-blue-900) / 1);
+
+    --col-green-200:   hsl(var(--hsl-green-200) / 1);
+    --col-green-300:   hsl(var(--hsl-green-300) / 1);
+    --col-green-400:   hsl(var(--hsl-green-400) / 1);
+    --col-green-600:   hsl(var(--hsl-green-600) / 1);
+    --col-green-900:   hsl(var(--hsl-green-900) / 1);
+
+    --col-red-200:     hsl(var(--hsl-red-200) / 1);
+    --col-red-300:     hsl(var(--hsl-red-300) / 1);
+    --col-red-400:     hsl(var(--hsl-red-400) / 1);
+    --col-red-600:     hsl(var(--hsl-red-600) / 1);
+    --col-red-900:     hsl(var(--hsl-red-900) / 1);
+
+    --col-dark:     hsl(var(--hsl-dark) / 1);
+    --col-darkest:  hsl(var(--hsl-darkest) / 1);
+    --col-light:    hsl(var(--hsl-light) / 1);
+
+
+    --fs-200: clamp(0.72rem, calc(0.72rem + 0.00vw), 0.72rem);
+    --fs-300: clamp(0.84rem, calc(0.84rem + 0.00vw), 0.84rem);
+    --fs-350: clamp(1.05rem, calc(1.05rem + 0.00vw), 1.05rem);
+    --fs-400: clamp(1.13rem, calc(1.13rem + 0.00vw), 1.13rem);
+    --fs-450: 25px;
+    --fs-500: clamp(1.50rem, calc(1.50rem + 0.00vw), 1.50rem);
+    --fs-600: clamp(2.00rem, calc(2.00rem + 0.00vw), 2.00rem);
+    --fs-700: clamp(2.66rem, calc(2.66rem + 0.00vw), 2.66rem);
+    --fs-800: clamp(3.55rem, calc(3.55rem + 0.00vw), 3.55rem);
+    --fs-900: clamp(4.74rem, calc(4.74rem + 0.00vw), 4.74rem);
+
+
+    --fw-400: 400;
+    --fw-600: 500;
+    --fw-900: 700;
+
+    --transition: 250ms ease-out;
+}

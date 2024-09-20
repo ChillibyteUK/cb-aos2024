@@ -1,0 +1,62 @@
+.footer {
+    font-size: var(--fs-300);
+    background-color: var(--col-darkest);
+    color: white;
+    a {
+        font-weight: var(--fw-900);
+        color: inherit;
+    }
+    &__heading {
+        font-weight: var(--fw-400);
+        margin-bottom: 0.25rem;
+    }
+    .menu {
+        padding-inline-start: 0;
+    }
+    .menu-item {
+        list-style-type: none;
+    }
+    .fa-ul {
+        margin-left: 1.4rem;
+    }
+    &__address {
+        font-weight: var(--fw-600);
+    }
+    &__logo {
+        max-width: 200px;
+        display: block;
+        margin-inline: auto;
+        margin-top: 1rem;
+        @media (min-width:1200px){
+            margin-inline: 0 auto;
+            margin-top: 0;
+        }
+    }
+}
+
+.colophon {
+    background-color: var(--col-darkest);
+    font-size: var(--fs-300);
+    color: var(--col-dark);
+
+    img {
+        max-width: 180px;
+        margin-bottom: 2rem;
+    }
+
+    .lined {
+        border-top: 1px solid var(--col-dark);
+        padding-block: 0.5rem 1rem;
+    }
+    
+    a {
+        color: inherit;
+    }
+    .cb {
+        content: url(../img/cb.png);
+        transition: all .2s ease-in;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
