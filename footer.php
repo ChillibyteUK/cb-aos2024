@@ -35,9 +35,10 @@ defined('ABSPATH') || exit;
                     <div><?=get_field('shipping_address', 'options')?></div>
                 </div>
                 <div>
-                    <?=pll__('Registration Number','cb-aos2024')?>: Tostedt HRB 100017
-                    <?=pll__('Chairman of Supervisory Board','cb-aos2024')?>: Victor Phillip M. Dahdaleh
-                    <?=pll__('Managing Directors','cb-aos2024')?>: Hartmut Borchers, Dr. Irene Pötting</div>
+                    <?=pll__('Registration Number','cb-aos2024')?>: Tostedt HRB 100017<br>
+                    <?=pll__('Chairman of Supervisory Board','cb-aos2024')?>: Victor Phillip M. Dahdaleh<br>
+                    <?=pll__('Managing Directors','cb-aos2024')?>: Hartmut Borchers, Dr. Irene Pötting<br>
+                </div>
             </div>
             <div
             class="col-sm-6 col-lg-3 col-xl-3 order-xl-5 d-flex flex-column gap-4 justify-content-between footer__address">
