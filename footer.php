@@ -12,17 +12,17 @@ defined('ABSPATH') || exit;
                     <?=wp_nav_menu(array('theme_location' => 'footer_menu1'))?>
                 </div>
                 <div>
-                    <div class="footer__heading">Operations & Products</div>
+                    <div class="footer__heading"><?=pll__('Operations & Products','cb-aos2024')?></div>
                     <?=wp_nav_menu(array('theme_location' => 'footer_menu2'))?>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3 col-xl-2 order-xl-3">
                 <div>
-                    <div class="footer__heading">Quick Links</div>
+                    <div class="footer__heading"><?=pll__('Quick Links','cb-aos2024')?></div>
                     <?=wp_nav_menu(array('theme_location' => 'footer_menu4'))?>
                 </div>
                 <div>
-                    <div class="footer__heading">Sustainability</div>
+                    <div class="footer__heading"><?=pll__('Sustainability','cb-aos2024')?></div>
                     <?=wp_nav_menu(array('theme_location' => 'footer_menu3'))?>
                 </div>
             </div>
