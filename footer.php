@@ -6,7 +6,7 @@ defined('ABSPATH') || exit;
 <footer class="footer pt-5 pb-3">
     <div class="container-xl">
         <div class="row">
-            <div class="col-sm-6 col-lg-3 col-xl-2 order-xl-2">
+            <div class="col-sm-6 col-lg-4 col-xl-4 order-xl-2">
                 <div>
                     <div class="footer__heading"><?=pll__('About Us','cb-aos2024')?></div>
                     <?=wp_nav_menu(array('theme_location' => 'footer_menu1'))?>
@@ -16,7 +16,7 @@ defined('ABSPATH') || exit;
                     <?=wp_nav_menu(array('theme_location' => 'footer_menu2'))?>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3 col-xl-2 order-xl-3">
+            <div class="col-sm-6 col-lg-3 col-xl-4 order-xl-3">
                 <div>
                     <div class="footer__heading"><?=pll__('Quick Links','cb-aos2024')?></div>
                     <?=wp_nav_menu(array('theme_location' => 'footer_menu4'))?>
@@ -27,7 +27,7 @@ defined('ABSPATH') || exit;
                 </div>
             </div>
             <div
-                class="col-sm-6 col-lg-3 col-xl-3 order-xl-4 d-flex flex-column gap-4 justify-content-between pe-0 footer__address">
+                class="col-sm-6 col-lg-4 col-xl-4 order-xl-4 d-flex flex-column gap-4 justify-content-between pe-0 footer__address">
                 <div>
                     <div class="footer__heading"><?=pll__('Mailing Address','cb-aos2024')?></div>
                     <div class="mb-4"><?=get_field('mailing_address', 'options')?></div>
@@ -35,29 +35,28 @@ defined('ABSPATH') || exit;
                     <div><?=get_field('shipping_address', 'options')?></div>
                 </div>
                 <div>
-                    <?=pll__('Registration Number','cb-aos2024')?>: Tostedt HRB 100017<br>
-                    <?=pll__('Chairman of Supervisory Board','cb-aos2024')?>: Victor Phillip M. Dahdaleh<br>
-                    <?=pll__('Managing Directors','cb-aos2024')?>: Hartmut Borchers, Dr. Irene Pötting<br>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-phone"></i></span>
+                            <a
+                                href="tel:<?=parse_phone(get_field('contact_phone', 'options'))?>"><?=get_field('contact_phone', 'options')?></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-fax"></i></span>
+                            <?=get_field('contact_fax', 'options')?>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
+                            <a
+                                href="mailto:<?=get_field('contact_email', 'options')?>"><?=get_field('contact_email', 'options')?></a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div
-            class="col-sm-6 col-lg-3 col-xl-3 order-xl-5 d-flex flex-column gap-4 justify-content-between footer__address">
-                <ul class="fa-ul">
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-phone"></i></span>
-                        <a
-                            href="tel:<?=parse_phone(get_field('contact_phone', 'options'))?>"><?=get_field('contact_phone', 'options')?></a>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-fax"></i></span>
-                        <?=get_field('contact_fax', 'options')?>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
-                        <a
-                            href="mailto:<?=get_field('contact_email', 'options')?>"><?=get_field('contact_email', 'options')?></a>
-                    </li>
-                </ul>
+                <div>
+                    <div><?=pll__('Registration Number','cb-aos2024')?>: Tostedt HRB 100017</div>
+                    <div><?=pll__('Chairman of Supervisory Board','cb-aos2024')?>: Victor Phillip M. Dahdaleh</div>
+                    <div><?=pll__('Managing Directors','cb-aos2024')?>: Hartmut Borchers, Dr. Irene Pötting</div>
+                </div>
             </div>
             <div class="col-xl-2 order-xl-1">
                 <img src="<?=get_stylesheet_directory_uri()?>/img/aos2024-logo--wo.svg"
