@@ -5,6 +5,9 @@ defined('ABSPATH') || exit;
 function cb_register_strings() {
     if ( function_exists( 'pll_register_string' ) ) {
         pll_register_string( 'about_us', 'About Us', 'cb-aos2024' );
+        pll_register_string( 'operations_products', 'Operations & Products', 'cb-aos2024' );
+        pll_register_string( 'quick_links', 'Quick Links', 'cb-aos2024' );
+        pll_register_string( 'sustainability', 'Sustainability', 'cb-aos2024' );
     }
 }
 
