@@ -10,6 +10,9 @@ function cb_register_strings() {
         pll_register_string( 'sustainability', 'Sustainability', 'cb-aos2024' );
         pll_register_string( 'mailing_address', 'Mailing Address', 'cb-aos2024' );
         pll_register_string( 'shipping_address', 'Shipping Address', 'cb-aos2024' );
+        pll_register_string( 'reg_no', 'Registration Number', 'cb-aos2024' );
+        pll_register_string( 'chairman', 'Chairman of Supervisory Board', 'cb-aos2024' );
+        pll_register_string( 'managing_directors', 'Managing Directors', 'cb-aos2024' );
     }
 }
 
