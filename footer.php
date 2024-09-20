@@ -59,7 +59,7 @@ defined('ABSPATH') || exit;
                 </div>
             </div>
             <div class="col-sm-6 col-xl-2 order-xl-1">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/aos2024-logo--wo.svg"
+                <img src="<?=get_stylesheet_directory_uri()?>/img/aos-logo--wo.png"
                     alt="Aluminium Oxid Stade GmbH" class="footer__logo">
             </div>
         </div>
