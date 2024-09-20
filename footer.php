@@ -28,12 +28,10 @@ defined('ABSPATH') || exit;
             </div>
             <div
                 class="col-sm-6 col-lg-3 col-xl-3 order-xl-4 d-flex flex-column gap-4 justify-content-between pe-0 footer__address">
-                <div>
-                    <div class="footer__heading"><?=pll__('Mailing Address','cb-aos2024')?></div>
-                    <div><?=get_field('mailing_address', 'options')?></div>
-                    <div class="footer__heading"><?=pll__('Shipping Address','cb-aos2024')?></div>
-                    <div><?=get_field('shipping_address', 'options')?></div>
-                </div>
+                <div class="footer__heading"><?=pll__('Mailing Address','cb-aos2024')?></div>
+                <div><?=get_field('mailing_address', 'options')?></div>
+                <div class="footer__heading"><?=pll__('Shipping Address','cb-aos2024')?></div>
+                <div><?=get_field('shipping_address', 'options')?></div>
                 <ul class="fa-ul">
                     <li>
                         <span class="fa-li"><i class="fa-solid fa-phone"></i></span>
