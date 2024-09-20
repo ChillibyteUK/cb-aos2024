@@ -32,6 +32,9 @@ defined('ABSPATH') || exit;
                 <div><?=get_field('mailing_address', 'options')?></div>
                 <div class="footer__heading"><?=pll__('Shipping Address','cb-aos2024')?></div>
                 <div><?=get_field('shipping_address', 'options')?></div>
+            </div>
+            <div
+            class="col-sm-6 col-lg-3 col-xl-3 order-xl-5 d-flex flex-column gap-4 justify-content-between footer__address">
                 <ul class="fa-ul">
                     <li>
                         <span class="fa-li"><i class="fa-solid fa-phone"></i></span>
@@ -46,29 +49,6 @@ defined('ABSPATH') || exit;
                         <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
                         <a
                             href="mailto:<?=get_field('contact_email', 'options')?>"><?=get_field('contact_email', 'options')?></a>
-                    </li>
-                </ul>
-            </div>
-            <div
-                class="col-sm-6 col-lg-3 col-xl-3 order-xl-5 d-flex flex-column gap-4 justify-content-between footer__address">
-                <div>
-                    <div class="footer__heading">Sales Office</div>
-                    <?=get_field('sales_office_address', 'options')?>
-                </div>
-                <ul class="fa-ul">
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-phone"></i></span>
-                        <a
-                            href="tel:<?=parse_phone(get_field('sales_office_phone', 'options'))?>"><?=get_field('sales_office_phone', 'options')?></a>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-fax"></i></span>
-                        <?=get_field('sales_office_fax', 'options')?>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
-                        <a
-                            href="mailto:<?=get_field('sales_office_email', 'options')?>"><?=get_field('sales_office_email', 'options')?></a>
                     </li>
                 </ul>
             </div>
