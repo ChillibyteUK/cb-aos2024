@@ -2,12 +2,12 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-require_once CB_THEME_DIR . '/inc/cb-posttypes.php';
-require_once CB_THEME_DIR . '/inc/cb-taxonomies.php';
+// require_once CB_THEME_DIR . '/inc/cb-posttypes.php';
+// require_once CB_THEME_DIR . '/inc/cb-taxonomies.php';
 require_once CB_THEME_DIR . '/inc/cb-utility.php';
 require_once CB_THEME_DIR . '/inc/cb-blocks.php';
 // require_once CB_THEME_DIR . '/inc/cb-news.php';
-// require_once CB_THEME_DIR . '/inc/cb-careers.php';
+require_once CB_THEME_DIR . '/inc/cb-careers.php';
 
 
 // Remove unwanted SVG filter injection WP
@@ -60,7 +60,7 @@ function widgets_init()
         'footer_menu1' => __('Footer Menu 1', 'cb-aos2024'),
         'footer_menu2' => __('Footer Menu 2', 'cb-aos2024'),
         'footer_menu3' => __('Footer Menu 3', 'cb-aos2024'),
-        'footer_menu3' => __('Footer Menu 4', 'cb-aos2024'),
+        'footer_menu4' => __('Footer Menu 4', 'cb-aos2024'),
     ));
 
     unregister_sidebar('hero');
