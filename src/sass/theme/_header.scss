@@ -15,6 +15,13 @@ header {
                 color: white;
             }
         }
+
+        &[hreflang] {
+            display: grid;
+            aspect-ratio: 7 / 6;
+            place-content: center;
+        }
+
     }
 
     .logo-container {

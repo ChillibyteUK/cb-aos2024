@@ -21742,6 +21742,11 @@ header a.nav-link {
     color: white;
   }
 }
+header a.nav-link[hreflang] {
+  display: grid;
+  aspect-ratio: 7/6;
+  place-content: center;
+}
 header .logo-container {
   max-width: 186px;
   margin-right: 1rem;
