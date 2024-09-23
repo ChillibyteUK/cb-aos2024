@@ -68,7 +68,7 @@ defined('ABSPATH') || exit;
 <div class="colophon">
     <div class="container-xl py-2">
         <div class="d-flex flex-wrap justify-content-between lined">
-            <div class="col-md-6 text-center text-md-start">
+            <div class="col-md-6  d-flex align-items-start justify-content-center justify-content-md-end flex-wrap">
                 &copy; <?=date('Y')?> Aluminium Oxid Stade GmbH
             </div>
             <div
