@@ -68,11 +68,11 @@ defined('ABSPATH') || exit;
 <div class="colophon">
     <div class="container-xl py-2">
         <div class="d-flex flex-wrap justify-content-between lined">
-            <div class="col-md-8 text-center text-md-start">
+            <div class="col-md-6 text-center text-md-start">
                 &copy; <?=date('Y')?> Aluminium Oxid Stade GmbH
             </div>
             <div
-                class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end flex-wrap gap-1">
+                class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-end flex-wrap gap-1">
                 <?php
                 $terms       = get_page_by_path('terms-conditions')->ID;
                 $terms_url   = get_permalink(pll_get_post($terms));
