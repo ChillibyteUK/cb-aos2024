@@ -125,6 +125,27 @@
             "append": ""
         },
         {
+            "key": "field_66f1579b98036",
+            "label": "Maps URL",
+            "name": "maps_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_644a4141fb5b6",
             "label": "Analytics",
             "name": "",
@@ -240,5 +261,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0
+    "show_in_rest": 0,
+    "modified": 1727092655
 }

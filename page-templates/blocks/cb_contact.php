@@ -17,7 +17,7 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <iframe src="<?=get_field('map_url','options')?>" width="100%" height="450" frameborder="0"></iframe>
+                <iframe src="<?=get_field('maps_url','options')?>" width="100%" height="450" frameborder="0"></iframe>
             </div>
         </div>
     </div>
