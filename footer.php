@@ -78,8 +78,11 @@ defined('ABSPATH') || exit;
                 $terms  = get_page_by_path('terms-conditions');
                 $priv   = get_page_by_path('privacy-policy')->ID;
                 $cookie = get_page_by_path('cookie-policy')->ID;
+
+                $terms_url = pll_get_post_url($terms);
+                $terms_title = get_the_title(pll_get_post($terms));
                 ?>
-                <a href="<?=pll_get_post_url($terms)?>"><?=get_the_title(pll_get_post($terms))?></a> |
+                <a href="<?=$terms_url?>"><?=$terms_title?></a> |
                 <a href="/privacy-policy/">Privacy</a> & <a href="/cookie-policy/"> Cookies</a> |
                 <a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
                     title="Digital Marketing by Chillibyte"></a>
