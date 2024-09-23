@@ -76,7 +76,6 @@ defined('ABSPATH') || exit;
                 <?php
                 $curr_lang = pll_current_language();
                 $terms  = get_page_by_path('terms-conditions');
-                var_dump($terms);
                 $priv   = get_page_by_path('privacy-policy')->ID;
                 $cookie = get_page_by_path('cookie-policy')->ID;
                 ?>
