@@ -5,8 +5,10 @@ $file_path = get_attached_file($attachment_id);
 $file_size = filesize($file_path);
 $file_url = wp_get_attachment_url($attachment_id);
 
+$class = $block['className'] ?? null;
+
 ?>
-<section class="pdf_thumbnail">
+<section class="pdf_thumbnail <?=$class?>">
     <div class="container-xl text-center">
         <a class="pdf_thumbnail__card" href="<?=$file_url?>" target="_blank">
             <?php
