@@ -90,7 +90,7 @@ defined('ABSPATH') || exit;
                 <a href="<?=$terms_url?>"><?=$terms_title?></a> |
                 <a href="<?=$privacy_url?>"><?=$privacy_title?></a> | <a href="<?=$cookie_url?>"><?=$cookie_title?></a> |
                 <a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
-                    title="Digital Marketing by Chillibyte"></a>
+                    title="<?=pll__('Digital Marketing by Chillibyte','cb-aos2024')?>"></a>
             </div>
         </div>
     </div>

@@ -13,6 +13,7 @@ function cb_register_strings() {
         pll_register_string( 'reg_no', 'Registration Number', 'cb-aos2024' );
         pll_register_string( 'chairman', 'Chairman of Supervisory Board', 'cb-aos2024' );
         pll_register_string( 'managing_directors', 'Managing Directors', 'cb-aos2024' );
+        pll_register_string( 'chillibyte', 'Digital Marketing by Chillibyte', 'cb-aos2024' );
     }
 }
 
