@@ -5,8 +5,10 @@
             <div class="col-md-6">
                 <ul class="fa-ul">
                     <li class="mb-4"><span class="fa-li"><i class="fa-solid fa-map-marker-alt"></i></span>
+                        <div class="fw-bold"><?=pll__('Mailing Address','cb-aos2024')?></div>
                         <?=get_field('mailing_address','options')?></li>
                     <li class="mb-4"><span class="fa-li"><i class="fa-solid fa-map-marker-alt"></i></span>
+                        <div class="fw-bold"><?=pll__('Shipping Address','cb-aos2024')?></div>
                         <?=get_field('shipping_address','options')?></li>
                     <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>
                         <a href="tel:<?=get_field('contact_phone','options')?>"><?=get_field('contact_phone','options')?></a></li>
