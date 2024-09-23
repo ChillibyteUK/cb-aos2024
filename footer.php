@@ -75,7 +75,7 @@ defined('ABSPATH') || exit;
                 class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end flex-wrap gap-1">
                 <?php
                 $curr_lang = pll_current_language();
-                $terms  = get_page_by_path('terms-conditions');
+                $terms  = get_page_by_path('terms-conditions')->ID;
                 $priv   = get_page_by_path('privacy-policy')->ID;
                 $cookie = get_page_by_path('cookie-policy')->ID;
 
