@@ -7,7 +7,7 @@ $file_url = wp_get_attachment_url($attachment_id);
 
 ?>
 <section class="pdf_thumbnail">
-    <div class="container-xl">
+    <div class="container-xl text-center">
         <a class="pdf_thumbnail__card" href="<?=$file_url?>" target="_blank">
             <?php
             if ($pdf_thumbnail) {
