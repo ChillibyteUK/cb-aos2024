@@ -73,7 +73,14 @@ defined('ABSPATH') || exit;
             </div>
             <div
                 class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end flex-wrap gap-1">
-                <a href="/terms-conditions/">Terms & Conditions</a> |
+                <?php
+                $curr_lang = pll_current_language();
+                $terms  = get_page_by_path('terms-conditions');
+                var_dump($terms);
+                $priv   = get_page_by_path('privacy-policy')->ID;
+                $cookie = get_page_by_path('cookie-policy')->ID;
+                ?>
+                <a href="<?=pll_get_post_url($terms)?>"><?=get_the_title(pll_get_post($terms))?></a> |
                 <a href="/privacy-policy/">Privacy</a> & <a href="/cookie-policy/"> Cookies</a> |
                 <a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
                     title="Digital Marketing by Chillibyte"></a>
