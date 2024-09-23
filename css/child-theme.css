@@ -21748,17 +21748,17 @@ header a.nav-link[hreflang] {
   place-content: center;
 }
 header .logo-container {
-  max-width: 186px;
+  max-width: 90px;
   margin-right: 1rem;
 }
 header .logo {
-  background-image: url(../img/aos-logo.png);
+  background-image: url(../img/aos-logo--blue.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
-  aspect-ratio: 3/1;
-  width: 186px;
+  aspect-ratio: 16/10;
+  width: 90px;
   max-width: 100%;
 }
 header.hide {
