@@ -22,8 +22,9 @@ $file_type = wp_check_filetype($file_url);
             <div class="pdf_thumbnail__caption"><?=get_field('caption')?></div>
                 <?php
             }
+            $icon = $file_type['ext'] == 'pdf' ? 'fa-file-pdf' : 'fa-file-image';
             ?>
-            <div class="pdf_thumbnail__size"><i class="fa-solid fa-file-<?=$file_type['ext']?>"></i> <span>Download <?=strtoupper($file_type['ext'])?> (<?=formatBytes($file_size)?>)</span></div>
+            <div class="pdf_thumbnail__size"><i class="fa-solid <?=$icon?>"></i> <span>Download <?=strtoupper($file_type['ext'])?> (<?=formatBytes($file_size)?>)</span></div>
         </a>
     </div>
 </section>
