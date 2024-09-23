@@ -1,6 +1,5 @@
 <section class="contact py-5">
     <div class="container-xl">
-        <h2>Head Office</h2>
         <div class="row">
             <div class="col-md-6">
                 <ul class="fa-ul">
