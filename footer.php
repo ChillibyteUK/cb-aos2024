@@ -74,16 +74,21 @@ defined('ABSPATH') || exit;
             <div
                 class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end flex-wrap gap-1">
                 <?php
-                $curr_lang = pll_current_language();
-                $terms  = get_page_by_path('terms-conditions')->ID;
-                $priv   = get_page_by_path('privacy-policy')->ID;
-                $cookie = get_page_by_path('cookie-policy')->ID;
-
-                $terms_url = pll_get_post_url($terms);
+                $terms       = get_page_by_path('terms-conditions')->ID;
+                $terms_url   = get_permalink(pll_get_post($terms));
                 $terms_title = get_the_title(pll_get_post($terms));
+                
+                $privacy       = get_page_by_path('privacy-policy')->ID;
+                $privacy_url   = get_permalink(pll_get_post($privacy));
+                $privacy_title = get_the_title(pll_get_post($privacy));
+
+                $cookie       = get_page_by_path('cookie-policy')->ID;
+                $cookie_url   = get_permalink(pll_get_post($cookie));
+                $cookie_title = get_the_title(pll_get_post($cookie));
+
                 ?>
                 <a href="<?=$terms_url?>"><?=$terms_title?></a> |
-                <a href="/privacy-policy/">Privacy</a> & <a href="/cookie-policy/"> Cookies</a> |
+                <a href="<?=$privacy_url?>"><?=$privacy_title?></a> | <a href="<?=$cookie_url?>"><?=$cookie_title?></a> |
                 <a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
                     title="Digital Marketing by Chillibyte"></a>
             </div>
