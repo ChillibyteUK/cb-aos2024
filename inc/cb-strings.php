@@ -17,6 +17,7 @@ function cb_register_strings()
         pll_register_string('chillibyte', 'Digital Marketing by Chillibyte', 'cb-aos2024');
         pll_register_string('password', 'This content is password protected. To view it please enter your password below:', 'cb-aos2024');
         pll_register_string('enter', 'Enter', 'cb-aos2024');
+        pll_register_string('search', 'Search:', 'cb-aos2024');
     }
 }
 
