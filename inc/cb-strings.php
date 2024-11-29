@@ -17,8 +17,12 @@ function cb_register_strings()
         pll_register_string('chillibyte', 'Digital Marketing by Chillibyte', 'cb-aos2024');
         pll_register_string('password', 'This content is password protected. To view it please enter your password below:', 'cb-aos2024');
         pll_register_string('enter', 'Enter', 'cb-aos2024');
-        pll_register_string('search', 'Search:', 'cb-aos2024');
+        pll_register_string('search-label', 'Search:', 'cb-aos2024');
+        pll_register_string('search-button', 'Search', 'cb-aos2024');
+        pll_register_string('found-one', 'Found', 'cb-aos2024');
+        pll_register_string('found-two', 'result(s) out of', 'cb-aos2024');
+        pll_register_string('found-three', 'files.', 'cb-aos2024');
     }
 }
 
-add_action('init', 'cb_register_strings');
+add_action('wp_loaded', 'cb_register_strings');
