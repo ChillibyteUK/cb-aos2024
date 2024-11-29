@@ -148,13 +148,13 @@ function custom_password_form()
 {
     $output = '<div class="container-xl py-5">';
     $output .= '<form action="' . esc_url(site_url('wp-login.php?action=postpass', 'login_post')) . '" method="post" class="post-password-form">';
-    $output .= '<p>' . esc_html__('This content is password protected. To view it please enter your password below:', 'text-domain') . '</p>';
+    $output .= '<p>' . pll__('This content is password protected. To view it please enter your password below:', 'cb-aos2024') . '</p>';
     $output .= '<div class="row">';
     $output .= '<div class="col-sm-6">';
     $output .= '<input name="post_password" id="pwbox-' . (int) get_the_ID() . '" type="password" class="form-control" size="20" />';
     $output .= '</div>';
     $output .= '<div class="col-sm-6">';
-    $output .= '<input type="submit" name="Submit" class="btn btn-secondary" value="' . esc_attr__('Enter') . '" />';
+    $output .= '<input type="submit" name="Submit" class="btn btn-secondary" value="' . pll__('Enter', 'cb-aos2024') . '" />';
     $output .= '</div>';
     $output .= '</div>';
     $output .= '</form>';
