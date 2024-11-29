@@ -25,6 +25,7 @@ function cb_register_strings()
         pll_register_string('size', 'Size:', 'cb-aos2024');
         pll_register_string('date', 'Date:', 'cb-aos2024');
         pll_register_string('no-files', 'No files found.', 'cb-aos2024');
+        pll_register_string('search-warning', 'Your search for [string] returns more than [n] results.', 'cb-aos2024');
     }
 }
 
