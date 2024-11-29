@@ -33,22 +33,22 @@ add_filter('theme_page_templates', 'child_theme_remove_page_template');
 function child_theme_remove_page_template($page_templates)
 {
     // unset($page_templates['page-templates/blank.php'],$page_templates['page-templates/empty.php'], $page_templates['page-templates/fullwidthpage.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php']);
-    unset($page_templates['page-templates/blank.php'],$page_templates['page-templates/empty.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php']);
+    unset($page_templates['page-templates/blank.php'], $page_templates['page-templates/empty.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php']);
     return $page_templates;
 }
 add_action('after_setup_theme', 'remove_understrap_post_formats', 11);
 function remove_understrap_post_formats()
 {
-    remove_theme_support('post-formats', array( 'aside', 'image', 'video' , 'quote' , 'link' ));
+    remove_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
 }
 
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page(
         array(
-            'page_title' 	=> 'Site-Wide Settings',
-            'menu_title'	=> 'Site-Wide Settings',
-            'menu_slug' 	=> 'theme-general-settings',
-            'capability'	=> 'edit_posts',
+            'page_title'     => 'Site-Wide Settings',
+            'menu_title'    => 'Site-Wide Settings',
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
         )
     );
 }
@@ -128,21 +128,41 @@ function register_cb_dashboard_widget()
 
 function cb_dashboard_widget_display()
 {
-    ?>
-<div style="display: flex; align-items: center; justify-content: space-around;">
-    <img style="width: 50%;"
-        src="<?= get_stylesheet_directory_uri().'/img/cb-full.jpg'; ?>">
-    <a class="button button-primary" target="_blank" rel="noopener nofollow noreferrer"
-        href="mailto:hello@www.chillibyte.co.uk/">Contact</a>
-</div>
-<div>
-    <p><strong>Thanks for choosing Chillibyte!</strong></p>
-    <hr>
-    <p>Got a problem with your site, or want to make some changes & need us to take a look for you?</p>
-    <p>Use the link above to get in touch and we'll get back to you ASAP.</p>
-</div>
+?>
+    <div style="display: flex; align-items: center; justify-content: space-around;">
+        <img style="width: 50%;"
+            src="<?= get_stylesheet_directory_uri() . '/img/cb-full.jpg'; ?>">
+        <a class="button button-primary" target="_blank" rel="noopener nofollow noreferrer"
+            href="mailto:hello@www.chillibyte.co.uk/">Contact</a>
+    </div>
+    <div>
+        <p><strong>Thanks for choosing Chillibyte!</strong></p>
+        <hr>
+        <p>Got a problem with your site, or want to make some changes & need us to take a look for you?</p>
+        <p>Use the link above to get in touch and we'll get back to you ASAP.</p>
+    </div>
 <?php
 }
+
+function custom_password_form()
+{
+    $output = '<div class="container-xl py-5">';
+    $output .= '<form action="' . esc_url(site_url('wp-login.php?action=postpass', 'login_post')) . '" method="post" class="post-password-form">';
+    $output .= '<p>' . esc_html__('This content is password protected. To view it please enter your password below:', 'text-domain') . '</p>';
+    $output .= '<div class="row">';
+    $output .= '<div class="col-sm-6">';
+    $output .= '<input name="post_password" id="pwbox-' . (int) get_the_ID() . '" type="password" class="form-control" size="20" />';
+    $output .= '</div>';
+    $output .= '<div class="col-sm-6">';
+    $output .= '<input type="submit" name="Submit" class="btn btn-secondary" value="' . esc_attr__('Enter') . '" />';
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '</form>';
+    $output .= '</div>';
+
+    return $output;
+}
+add_filter('the_password_form', 'custom_password_form');
 
 
 // add_filter('wpseo_breadcrumb_links', function( $links ) {
@@ -166,8 +186,8 @@ function cc_gutenberg_register_files()
     // script file
     wp_register_script(
         'cc-block-script',
-        get_stylesheet_directory_uri() .'/js/block-script.js', // adjust the path to the JS file
-        array( 'wp-blocks', 'wp-edit-post' )
+        get_stylesheet_directory_uri() . '/js/block-script.js', // adjust the path to the JS file
+        array('wp-blocks', 'wp-edit-post')
     );
     // register block editor script
     register_block_type('cc/ma-block-files', array(
@@ -225,7 +245,6 @@ function cb_theme_enqueue()
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.3.min.js', array(), null, true);
     wp_enqueue_script('parallax', get_stylesheet_directory_uri() . '/js/parallax.min.js', array('jquery'), null, true);
-
 }
 add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
 
@@ -273,4 +292,5 @@ add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
 //     array_unshift($editors, ExtendedWpImageEditorImagick::class);
 
 //     return $editors;
-// });?>
+// });
+?>
