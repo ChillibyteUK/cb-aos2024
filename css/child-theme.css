@@ -18,8 +18,8 @@
   --hsl-dark: 0 0% 50%;
   --hsl-darkest: 0 0% 29%;
   --hsl-light: 0 0% 95%;
-  --h-top: 85px;
-  --h-top-desktop: 85px;
+  --h-top: 75px;
+  --h-top-desktop: 75px;
   --col-blue-200: hsl(var(--hsl-blue-200) / 1);
   --col-blue-300: hsl(var(--hsl-blue-300) / 1);
   --col-blue-400: hsl(var(--hsl-blue-400) / 1);
@@ -21800,6 +21800,40 @@ header .dropdown-menu {
     opacity: 1;
   }
 }
+@media (min-width: 992px) {
+  header #navbars {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-areas: "logo topnav" "logo navbar";
+  }
+}
+header #navbars #logo {
+  grid-area: logo;
+  display: flex;
+  align-content: center;
+}
+header #navbars #toggle {
+  text-align: end;
+}
+header #navbars #topnav {
+  grid-area: topnav;
+  display: none;
+  text-align: end;
+  justify-items: end;
+}
+@media (min-width: 992px) {
+  header #navbars #topnav {
+    display: block;
+  }
+}
+header #navbars #topnav a.nav-link {
+  font-size: var(--fs-200);
+}
+header #navbars #navbar {
+  grid-area: navbar;
+}
 
 .footer {
   font-size: var(--fs-300);
@@ -21928,9 +21962,9 @@ header .dropdown-menu {
 }
 .hero__content {
   background-color: var(--_theme-bg);
-  max-width: 70ch;
   width: -moz-max-content;
   width: max-content;
+  max-width: min(70ch, 100%);
 }
 .hero h1, .hero .h1 {
   font-size: var(--fs-700);

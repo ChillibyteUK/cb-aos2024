@@ -112,22 +112,24 @@ do_action('wp_body_open');
 ?>
 <header id="wrapper-navbar" class="fixed-top p-0">
     <nav class="navbar navbar-expand-lg p-0">
-        <div class="container-xl py-2 nav-top align-items-end">
-            <div class="text-lg-center logo-container"><a href="<?=pll_home_url()?>" class="logo" aria-label="AOS-Stade Homepage"></a></div>
-            <div class="button-container d-lg-none">
+        <div id="navbars" class="container-xl py-2 nav-top">
+            <div id="logo" class="text-lg-center logo-container"><a href="<?=pll_home_url()?>" class="logo" aria-label="AOS-Stade Homepage"></a></div>
+            <div id="toggle" class="button-container d-lg-none">
                 <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                 </button>
             </div>
-            
+            <div id="topnav" class="topnav">
+<a href="/de/partner-login/" class="nav-link">Partner-Login</a>
+            </div>
             <div class="collapse navbar-collapse" id="navbar">
                     <?php
                     wp_nav_menu(
     array(
         'theme_location'  => 'primary_nav',
-        'container_class' => 'w-100',
+        'container_class' => 'w-100 pt-4 pt-lg-0',
         // 'container_id'    => 'primaryNav',
         'menu_class'      => 'navbar-nav justify-content-around w-100',
         'fallback_cb'     => '',

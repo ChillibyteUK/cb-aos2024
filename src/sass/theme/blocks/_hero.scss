@@ -26,8 +26,8 @@
     &__content {
         // padding: 2rem 2rem 1rem 0;
         background-color: var(--_theme-bg);
-        max-width: 70ch;
         width: max-content;
+        max-width: min(70ch,100%);
     }
 
     h1 {

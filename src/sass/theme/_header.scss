@@ -80,4 +80,37 @@ header {
             }
         }
     }
+
+    #navbars {
+        @media (min-width:992px) {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap: 1rem;
+            grid-template-areas: "logo topnav" "logo navbar";
+        }
+
+        #logo {
+            grid-area: logo;
+            display: flex;
+            align-content: center;
+        }
+        #toggle {
+            text-align: end;
+        }
+        #topnav {
+            grid-area: topnav;
+            display: none;
+            text-align: end;
+            justify-items: end;
+            @media (min-width:992px) {
+                display: block;
+            }
+            a.nav-link {
+                font-size: var(--fs-200);
+            }
+        }
+        #navbar {
+            grid-area: navbar;
+        }
+    }
 }
