@@ -127,7 +127,7 @@ do_action('wp_body_open');
                 if ($current_language === 'de') {
                     echo '<a href="/de/partner-login/" class="nav-link">Partner-Login</a>';
                 } elseif ($current_language === 'en') {
-                    echo '<a href="/partner-login/" class="nav-link">Partner Login</a>';
+                    echo '<a href="/documents/" class="nav-link">Partner Login</a>';
                 }
                 ?>
             </div>
