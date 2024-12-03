@@ -44,10 +44,8 @@
   --fs-400: clamp(1.13rem, calc(1.13rem + 0.00vw), 1.13rem);
   --fs-450: 25px;
   --fs-500: clamp(1.50rem, calc(1.50rem + 0.00vw), 1.50rem);
-  --fs-600: clamp(2.00rem, calc(2.00rem + 0.00vw), 2.00rem);
-  --fs-700: clamp(2.66rem, calc(2.66rem + 0.00vw), 2.66rem);
-  --fs-800: clamp(3.55rem, calc(3.55rem + 0.00vw), 3.55rem);
-  --fs-900: clamp(4.74rem, calc(4.74rem + 0.00vw), 4.74rem);
+  --fs-600: clamp(1.90rem, calc(1.90rem + 0.00vw), 1.90rem);
+  --fs-700: clamp(2.40rem, calc(2.40rem + 0.00vw), 2.40rem);
   --fw-400: 400;
   --fw-600: 500;
   --fw-900: 700;
