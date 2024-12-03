@@ -122,7 +122,14 @@ do_action('wp_body_open');
                 </button>
             </div>
             <div id="topnav" class="topnav">
-<a href="/de/partner-login/" class="nav-link">Partner-Login</a>
+                <?php
+                $current_language = pll_current_language();
+                if ($current_language === 'de') {
+                    echo '<a href="/de/partner-login/" class="nav-link">Partner-Login</a>';
+                } elseif ($current_language === 'en') {
+                    echo '<a href="/partner-login/" class="nav-link">Partner Login</a>';
+                }
+                ?>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
                     <?php
