@@ -180,25 +180,32 @@ function sync_directory_and_index($sftp, $remote_dir, $local_dir) {
         if ($sftp->is_dir($remote_path)) {
             sync_directory_and_index($sftp, $remote_path, $local_path);
         } else {
-            // Retrieve remote file's modification time
             $stat = $sftp->stat($remote_path);
-            if ($stat && isset($stat['mtime'])) {
-                $remote_mtime = $stat['mtime'];
-                $local_mtime = file_exists($local_path) ? filemtime($local_path) : null;
 
-                if (file_exists($local_path) && $local_mtime !== $remote_mtime) {
-                    // Update the local file's timestamp
-                    touch($local_path, $remote_mtime);
-                    echo "event: update\n";
-                    echo "data: Updated timestamp for: $local_path\n\n";
+            $remote_mtime = $stat['mtime'] ?? null;
+
+            if (!file_exists($local_path)) {
+                echo "event: update\n";
+                echo "data: Downloading new file: $remote_path\n\n";
+                ob_flush();
+                flush();
+                if (!$sftp->get($remote_path, $local_path)) {
+                    echo "event: error\n";
+                    echo "data: Failed to download file: $remote_path\n\n";
                     ob_flush();
                     flush();
+                    continue;
+                } else {
+                    $counters['downloaded']++;
                 }
             }
 
+            // Add file metadata to index
             $index[] = [
                 'name' => basename($local_path),
                 'path' => str_replace(ABSPATH, '', $local_path),
+                'size' => file_exists($local_path) ? filesize($local_path) : null,
+                'modified' => $remote_mtime ? date("Y-m-d H:i:s", $remote_mtime) : null,
             ];
         }
     }
