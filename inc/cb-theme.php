@@ -9,6 +9,7 @@ require_once CB_THEME_DIR . '/inc/cb-utility.php';
 require_once CB_THEME_DIR . '/inc/cb-blocks.php';
 // require_once CB_THEME_DIR . '/inc/cb-news.php';
 require_once CB_THEME_DIR . '/inc/cb-careers.php';
+require_once CB_THEME_DIR . '/inc/cb-sync.php';
 
 
 // Remove unwanted SVG filter injection WP
@@ -249,48 +250,7 @@ function cb_theme_enqueue()
 add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
 
 
-// black thumbnails - fix alpha channel
-/**
- * Patch to prevent black PDF backgrounds.
- *
- * https://core.trac.wordpress.org/ticket/45982
- */
-// require_once ABSPATH . 'wp-includes/class-wp-image-editor.php';
-// require_once ABSPATH . 'wp-includes/class-wp-image-editor-imagick.php';
 
-// // phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace
-// final class ExtendedWpImageEditorImagick extends WP_Image_Editor_Imagick
-// {
-//     /**
-//      * Add properties to the image produced by Ghostscript to prevent black PDF backgrounds.
-//      *
-//      * @return true|WP_error
-//      */
-//     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
-//     protected function pdf_load_source()
-//     {
-//         $loaded = parent::pdf_load_source();
 
-//         try {
-//             $this->image->setImageAlphaChannel(Imagick::ALPHACHANNEL_REMOVE);
-//             $this->image->setBackgroundColor('#ffffff');
-//         } catch (Exception $exception) {
-//             error_log($exception->getMessage());
-//         }
 
-//         return $loaded;
-//     }
-// }
-
-// /**
-//  * Filters the list of image editing library classes to prevent black PDF backgrounds.
-//  *
-//  * @param array $editors
-//  * @return array
-//  */
-// add_filter('wp_image_editors', function (array $editors): array {
-//     array_unshift($editors, ExtendedWpImageEditorImagick::class);
-
-//     return $editors;
-// });
 ?>
