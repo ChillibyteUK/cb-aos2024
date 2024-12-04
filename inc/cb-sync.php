@@ -127,7 +127,6 @@ function sftp_sync_files() {
     flush();
 }
 
-// Sync and index function
 function sync_directory_and_index($sftp, $remote_dir, $local_dir) {
     global $index, $counters;
 
@@ -178,6 +177,12 @@ function sync_directory_and_index($sftp, $remote_dir, $local_dir) {
         $local_path = rtrim($local_dir, '/') . '/' . $item;
 
         if ($sftp->is_dir($remote_path)) {
+            echo "event: update\n";
+            echo "data: Queueing directory for processing: $remote_path\n\n";
+            ob_flush();
+            flush();
+
+            // Process subdirectory with a delay to manage execution time
             sync_directory_and_index($sftp, $remote_path, $local_path);
         } else {
             $stat = $sftp->stat($remote_path);
@@ -200,14 +205,22 @@ function sync_directory_and_index($sftp, $remote_dir, $local_dir) {
                 }
             }
 
-            // Add file metadata to index
+            // Update the file's modification time if needed
+            if ($remote_mtime) {
+                touch($local_path, $remote_mtime);
+            }
+
+            // Add file metadata to the index
             $index[] = [
                 'name' => basename($local_path),
                 'path' => str_replace(ABSPATH, '', $local_path),
-                'size' => file_exists($local_path) ? filesize($local_path) : null,
-                'modified' => $remote_mtime ? date("Y-m-d H:i:s", $remote_mtime) : null,
+                'size' => filesize($local_path),
+                'modified' => date("Y-m-d H:i:s", $remote_mtime),
             ];
         }
+
+        // Add a small delay to avoid server overload
+        usleep(50000); // 50 milliseconds
     }
 
     foreach ($local_items as $item) {
@@ -239,6 +252,7 @@ function sync_directory_and_index($sftp, $remote_dir, $local_dir) {
         }
     }
 }
+
 
 
 // Save the index file
